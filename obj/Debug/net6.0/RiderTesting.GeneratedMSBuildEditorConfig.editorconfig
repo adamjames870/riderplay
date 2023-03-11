@@ -19,3 +19,6 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
 [C:/Users/Adam/RiderProjects/RiderTesting/Views/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Adam/RiderProjects/RiderTesting/Views/NavEventView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
