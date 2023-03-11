@@ -5,9 +5,10 @@
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="RiderTesting.NavEventView">
     
-    <StackPanel Orientation="Horizontal">
+    <StackPanel Orientation="Horizontal" Spacing="5">
         <TextBlock Text="{Binding Id}"></TextBlock>
         <TextBlock Text="{Binding Name}"></TextBlock>
+        <TextBlock Text="{Binding DateAndTime}"></TextBlock>
     </StackPanel>
     
 </UserControl>

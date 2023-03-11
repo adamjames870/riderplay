@@ -39,14 +39,19 @@ public class DataFactory : IDisposable
         var col = _db.GetCollection<NavEvent>(Constants.COLLECTION_NAME);
         string[] evts =  {"Arrival", "Departure", "Noon1", "Noon2", "Arrival", "NoonPort", "Departure", "Noon"};
 
-        ConcreteNavEvent? evt = new ConcreteNavEvent("DummyStart", -1);
+        ConcreteNavEvent? evt = new ConcreteNavEvent("DummyStart", -1, DateTime.Now);
         col.Insert(evt);
+
+        int i = 1;
             
         foreach (var s in evts)
         {
-            evt = new ConcreteNavEvent(s, evt.Id);
+            evt = new ConcreteNavEvent(s, evt.Id, DateTime.Now.AddDays(i));
             col.Insert(evt);
+            i++;
         }
+        
+        col.EnsureIndex(x => x.Id);
     }
     
 }

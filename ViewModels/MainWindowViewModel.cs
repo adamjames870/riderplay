@@ -19,8 +19,9 @@ public class MainWindowViewModel : ViewModelBase
             
             db.SetupForTesting();
             var NavEvents = db.NavEvents();
-            
-            NavEvents.EnsureIndex(x => x.Id);
+            int countEvt = NavEvents.Count();
+            int max = NavEvents.Max();
+
             var returnedEvent = NavEvents.FindById(NavEvents.Max());
 
             while (returnedEvent != null)

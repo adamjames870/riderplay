@@ -13,5 +13,7 @@ public class NavEventViewModel : ViewModelBase
 
     public string Name => _NavEvent.Name;
     public string Id => _NavEvent.Id.ToString();
-
+    
+    public string DateAndTime => $"{_NavEvent.DateAndTime:dd-MM-yyyy HHmm}";
+    
 }

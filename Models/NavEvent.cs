@@ -20,6 +20,17 @@ public abstract class NavEvent
 
     public abstract TimeSpan TimeSinceLastEvent(); // Probably will not be abstract in the end
 
+    public NavEvent()
+    {
+    }
+
+    public NavEvent(string name, int precedingId, DateTime dateAndTime)
+    {
+        Name = name;
+        PrecedingId = precedingId;
+        DateAndTime = dateAndTime;
+    }
+
     public NavEvent? PreviousEvent(LiteDatabase db)
     {
         var col = db.GetCollection<NavEvent>(Constants.COLLECTION_NAME);
