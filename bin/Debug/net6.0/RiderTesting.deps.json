@@ -12,6 +12,7 @@
           "Avalonia.Desktop": "0.10.18",
           "Avalonia.Diagnostics": "0.10.18",
           "Avalonia.ReactiveUI": "0.10.18",
+          "LiteDB": "5.0.16",
           "XamlNameReferenceGenerator": "1.6.1"
         },
         "runtime": {
@@ -347,6 +348,14 @@
           "lib/netstandard1.0/JetBrains.Annotations.dll": {
             "assemblyVersion": "10.3.0.0",
             "fileVersion": "10.3.0.0"
+          }
+        }
+      },
+      "LiteDB/5.0.16": {
+        "runtime": {
+          "lib/netstandard2.0/LiteDB.dll": {
+            "assemblyVersion": "5.0.16.0",
+            "fileVersion": "5.0.16.0"
           }
         }
       },
@@ -1099,6 +1108,13 @@
       "sha512": "sha512-0GLU9lwGVXjUNlr9ZIdAgjqLI2Zm/XFGJFaqJ1T1sU+kwfeMLhm68+rblUrNUP9psRl4i8yM7Ghb4ia4oI2E5g==",
       "path": "jetbrains.annotations/10.3.0",
       "hashPath": "jetbrains.annotations.10.3.0.nupkg.sha512"
+    },
+    "LiteDB/5.0.16": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-DMUYdRlgNbrSlyWzdQ4GqW934ntNHBGWMTNQlOL4hWz8WnveY6V9ZGo2ntPrSATW7kat8v5VoCXGSzToPiwZWw==",
+      "path": "litedb/5.0.16",
+      "hashPath": "litedb.5.0.16.nupkg.sha512"
     },
     "Microsoft.CodeAnalysis.Analyzers/2.9.6": {
       "type": "package",
