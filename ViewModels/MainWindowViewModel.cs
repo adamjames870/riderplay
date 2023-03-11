@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using Avalonia.Media;
 using LiteDB;
@@ -13,24 +14,31 @@ public class MainWindowViewModel : ViewModelBase
     public MainWindowViewModel()
     {
 
-        using (var db = new LiteDatabase("eventdb.db"))
+        using (var db = new LiteDatabase(Constants.DATABASE_NAME))
         {
             
-            db.DropCollection("NavEvents");
+            db.DropCollection(Constants.COLLECTION_NAME);
             
-            var col = db.GetCollection<NavEvent>("NavEvents");
+            var col = db.GetCollection<NavEvent>(Constants.COLLECTION_NAME);
             string[] evts =  {"Arrival", "Departure", "Noon1", "Noon2", "Arrival", "NoonPort", "Departure", "Noon"};
 
-            ConcreteNavEvent? evt = null;
+            ConcreteNavEvent? evt = new ConcreteNavEvent("DummyStart", -1);
+            col.Insert(evt);
+            
             foreach (var s in evts)
             {
-                evt = evt == null ? new ConcreteNavEvent("DummyStart", -1) : new ConcreteNavEvent(s, evt.Id);
+                evt = new ConcreteNavEvent(s, evt.Id);
                 col.Insert(evt);
             }
             
-            foreach (NavEvent item in col.FindAll())
+            col.EnsureIndex(x => x.Id);
+            int maxId = col.Max();
+            var returnedEvent = col.FindById(maxId);
+
+            while (returnedEvent.PrecedingId > -1)
             {
-                EventList.Add(new NavEventViewModel(item));
+                EventList.Add(new NavEventViewModel(returnedEvent));
+                returnedEvent = col.FindById(returnedEvent.PrecedingId);
             }
 
         }

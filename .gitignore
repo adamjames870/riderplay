@@ -5,6 +5,7 @@
 *.db
 bin/
 obj/Debug/
+.idea/
 
 # User-specific stuff
 .idea/**/workspace.xml
