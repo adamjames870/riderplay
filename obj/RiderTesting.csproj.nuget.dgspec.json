@@ -57,6 +57,10 @@
               "target": "Package",
               "version": "[0.10.18, )"
             },
+            "LiteDB": {
+              "target": "Package",
+              "version": "[5.0.16, )"
+            },
             "XamlNameReferenceGenerator": {
               "target": "Package",
               "version": "[1.6.1, )"

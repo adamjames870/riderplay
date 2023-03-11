@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "BrfQhpoKnsXi0FLho35IPq38Ky1HFWYGzMDBh0kwsY7TqLVg6CAei3UNDdoQNID5ZpFaMUYgyI+QGrxuWqKZBA==",
+  "dgSpecHash": "bFF5FaaGu++xT4/SzfkC1/q4zJi3Nzq8zjydf5fuXr3LcK4mnDGNFv5jcrZMa4mQXQ2X+xTSCnB2+F6SM8tI4g==",
   "success": true,
   "projectFilePath": "C:\\Users\\Adam\\RiderProjects\\RiderTesting\\RiderTesting.csproj",
   "expectedPackageFiles": [
@@ -23,6 +23,7 @@
     "C:\\Users\\Adam\\.nuget\\packages\\harfbuzzsharp.nativeassets.webassembly\\2.8.2.1-preview.108\\harfbuzzsharp.nativeassets.webassembly.2.8.2.1-preview.108.nupkg.sha512",
     "C:\\Users\\Adam\\.nuget\\packages\\harfbuzzsharp.nativeassets.win32\\2.8.2.1-preview.108\\harfbuzzsharp.nativeassets.win32.2.8.2.1-preview.108.nupkg.sha512",
     "C:\\Users\\Adam\\.nuget\\packages\\jetbrains.annotations\\10.3.0\\jetbrains.annotations.10.3.0.nupkg.sha512",
+    "C:\\Users\\Adam\\.nuget\\packages\\litedb\\5.0.16\\litedb.5.0.16.nupkg.sha512",
     "C:\\Users\\Adam\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\2.9.6\\microsoft.codeanalysis.analyzers.2.9.6.nupkg.sha512",
     "C:\\Users\\Adam\\.nuget\\packages\\microsoft.codeanalysis.common\\3.4.0\\microsoft.codeanalysis.common.3.4.0.nupkg.sha512",
     "C:\\Users\\Adam\\.nuget\\packages\\microsoft.codeanalysis.csharp\\3.4.0\\microsoft.codeanalysis.csharp.3.4.0.nupkg.sha512",
@@ -77,10 +78,10 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512",
     "C:\\Users\\Adam\\.nuget\\packages\\tmds.dbus\\0.9.0\\tmds.dbus.0.9.0.nupkg.sha512",
     "C:\\Users\\Adam\\.nuget\\packages\\xamlnamereferencegenerator\\1.6.1\\xamlnamereferencegenerator.1.6.1.nupkg.sha512",
-    "C:\\Users\\Adam\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.14\\microsoft.netcore.app.ref.6.0.14.nupkg.sha512",
-    "C:\\Users\\Adam\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.14\\microsoft.windowsdesktop.app.ref.6.0.14.nupkg.sha512",
     "C:\\Users\\Adam\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.14\\microsoft.aspnetcore.app.ref.6.0.14.nupkg.sha512",
-    "C:\\Users\\Adam\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.14\\microsoft.netcore.app.host.win-x64.6.0.14.nupkg.sha512"
+    "C:\\Users\\Adam\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.14\\microsoft.netcore.app.host.win-x64.6.0.14.nupkg.sha512",
+    "C:\\Users\\Adam\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.14\\microsoft.netcore.app.ref.6.0.14.nupkg.sha512",
+    "C:\\Users\\Adam\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.14\\microsoft.windowsdesktop.app.ref.6.0.14.nupkg.sha512"
   ],
   "logs": []
 }

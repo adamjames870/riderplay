@@ -464,6 +464,19 @@
           }
         }
       },
+      "LiteDB/5.0.16": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/LiteDB.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/LiteDB.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.CodeAnalysis.Analyzers/2.9.6": {
         "type": "package",
         "build": {
@@ -1956,6 +1969,25 @@
         "lib/portable-net4+sl4+wp7+netcore45/JetBrains.Annotations.xml",
         "lib/portable-net4+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/JetBrains.Annotations.dll",
         "lib/portable-net4+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/JetBrains.Annotations.xml"
+      ]
+    },
+    "LiteDB/5.0.16": {
+      "sha512": "DMUYdRlgNbrSlyWzdQ4GqW934ntNHBGWMTNQlOL4hWz8WnveY6V9ZGo2ntPrSATW7kat8v5VoCXGSzToPiwZWw==",
+      "type": "package",
+      "path": "litedb/5.0.16",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "icon_64x64.png",
+        "lib/net45/LiteDB.dll",
+        "lib/net45/LiteDB.xml",
+        "lib/netstandard1.3/LiteDB.dll",
+        "lib/netstandard1.3/LiteDB.xml",
+        "lib/netstandard2.0/LiteDB.dll",
+        "lib/netstandard2.0/LiteDB.xml",
+        "litedb.5.0.16.nupkg.sha512",
+        "litedb.nuspec"
       ]
     },
     "Microsoft.CodeAnalysis.Analyzers/2.9.6": {
@@ -4594,6 +4626,7 @@
       "Avalonia.Desktop >= 0.10.18",
       "Avalonia.Diagnostics >= 0.10.18",
       "Avalonia.ReactiveUI >= 0.10.18",
+      "LiteDB >= 5.0.16",
       "XamlNameReferenceGenerator >= 1.6.1"
     ]
   },
@@ -4653,6 +4686,10 @@
           "Avalonia.ReactiveUI": {
             "target": "Package",
             "version": "[0.10.18, )"
+          },
+          "LiteDB": {
+            "target": "Package",
+            "version": "[5.0.16, )"
           },
           "XamlNameReferenceGenerator": {
             "target": "Package",
