@@ -1,32 +1,35 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using Avalonia.Media;
 using LiteDB;
 
 namespace RiderTesting.ViewModels;
 
 public class MainWindowViewModel : ViewModelBase
 {
-    //public string Greeting => "Found: ";
-    public string Greeting { get; set; }
+
     public ObservableCollection<NavEventViewModel> EventList { get; } = new();
     
     public MainWindowViewModel()
     {
 
-        Greeting = "Found: ";
         using (var db = new LiteDatabase("eventdb.db"))
         {
             
+            db.DropCollection("NavEvents");
+            
             var col = db.GetCollection<NavEvent>("NavEvents");
-            // ConcreteNavEvent Arr = new("Arrival");
-            // ConcreteNavEvent Dep = new("Departure");
-            // ConcreteNavEvent Noon = new("Noon");
-            // col.Insert(Arr);
-            // col.Insert(Dep);
-            // col.Insert(Noon);
+            string[] evts =  {"Arrival", "Departure", "Noon1", "Noon2", "Arrival", "NoonPort", "Departure", "Noon"};
+
+            ConcreteNavEvent? evt = null;
+            foreach (var s in evts)
+            {
+                evt = evt == null ? new ConcreteNavEvent("DummyStart", -1) : new ConcreteNavEvent(s, evt.Id);
+                col.Insert(evt);
+            }
+            
             foreach (NavEvent item in col.FindAll())
             {
-                Greeting += $"{item.Name}(id: {item.Id}), ";
                 EventList.Add(new NavEventViewModel(item));
             }
 
