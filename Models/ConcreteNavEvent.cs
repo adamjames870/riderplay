@@ -12,11 +12,5 @@ public class ConcreteNavEvent : NavEvent
     }
 
     public ConcreteNavEvent(string name, int precedingId, DateTime dt) : base(name, precedingId, dt) { }
-
-    public override TimeSpan TimeSinceLastEvent()
-    {
-        throw new NotImplementedException();
-    }
-    
     
 }

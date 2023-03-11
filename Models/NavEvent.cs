@@ -17,9 +17,7 @@ public abstract class NavEvent
     public bool DateAndTimeIsFixed { get; set; }
     
     public int DistanceSinceLastEvent { get; set; } // In nautical miles
-
-    public abstract TimeSpan TimeSinceLastEvent(); // Probably will not be abstract in the end
-
+    
     public NavEvent()
     {
     }
