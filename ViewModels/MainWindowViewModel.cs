@@ -14,30 +14,19 @@ public class MainWindowViewModel : ViewModelBase
     public MainWindowViewModel()
     {
 
-        using (var db = new LiteDatabase(Constants.DATABASE_NAME))
+        using (var db = new DataFactory())
         {
             
-            db.DropCollection(Constants.COLLECTION_NAME);
+            db.SetupForTesting();
+            var NavEvents = db.NavEvents();
             
-            var col = db.GetCollection<NavEvent>(Constants.COLLECTION_NAME);
-            string[] evts =  {"Arrival", "Departure", "Noon1", "Noon2", "Arrival", "NoonPort", "Departure", "Noon"};
-
-            ConcreteNavEvent? evt = new ConcreteNavEvent("DummyStart", -1);
-            col.Insert(evt);
-            
-            foreach (var s in evts)
-            {
-                evt = new ConcreteNavEvent(s, evt.Id);
-                col.Insert(evt);
-            }
-            
-            col.EnsureIndex(x => x.Id);
-            var returnedEvent = col.FindById(col.Max());
+            NavEvents.EnsureIndex(x => x.Id);
+            var returnedEvent = NavEvents.FindById(NavEvents.Max());
 
             while (returnedEvent != null)
             {
                 EventList.Add(new NavEventViewModel(returnedEvent));
-                returnedEvent = returnedEvent.PreviousEvent(db);
+                returnedEvent = db.PreviousEvent(returnedEvent);
             }
 
         }
