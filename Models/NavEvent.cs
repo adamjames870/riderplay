@@ -1,4 +1,5 @@
 ﻿using System;
+using LiteDB;
 
 namespace RiderTesting;
 public abstract class NavEvent
@@ -19,6 +20,10 @@ public abstract class NavEvent
 
     public abstract TimeSpan TimeSinceLastEvent(); // Probably will not be abstract in the end
 
-
+    public NavEvent? PreviousEvent(LiteDatabase db)
+    {
+        var col = db.GetCollection<NavEvent>(Constants.COLLECTION_NAME);
+        return PrecedingId > 0 ? col.FindById(PrecedingId) : null;
+    }
 
 }

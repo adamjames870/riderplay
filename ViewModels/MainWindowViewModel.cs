@@ -32,13 +32,12 @@ public class MainWindowViewModel : ViewModelBase
             }
             
             col.EnsureIndex(x => x.Id);
-            int maxId = col.Max();
-            var returnedEvent = col.FindById(maxId);
+            var returnedEvent = col.FindById(col.Max());
 
-            while (returnedEvent.PrecedingId > -1)
+            while (returnedEvent != null)
             {
                 EventList.Add(new NavEventViewModel(returnedEvent));
-                returnedEvent = col.FindById(returnedEvent.PrecedingId);
+                returnedEvent = returnedEvent.PreviousEvent(db);
             }
 
         }
